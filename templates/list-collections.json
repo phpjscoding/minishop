@@ -1,12 +1,16 @@
 {
   "sections": {
     "main": {
-      "type": "list-of-collections",
+      "type": "list-collections",
       "settings": {
       }
+    },
+    "insta-gallery":{
+      "type":"insta-gallery"
     }
   },
   "order": [
-    "main"
+    "main",
+    "insta-gallery"
   ]
 }

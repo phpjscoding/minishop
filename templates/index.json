@@ -1,18 +1,46 @@
 {
   "sections": {
-    "hero": {
-      "type": "hero",
+    "statement": {
+      "type": "statement",
       "settings": {
       }
     },
-    "fist-of-collections": {
-      "type": "list-of-collections",
-      "settings": {
-      }
+    "navbar":{
+      "type":"navbar"
+    },
+    "hero":{
+      "type":"hero"
+    },
+    "features":{
+      "type":"features"
+    },
+    "products-grid":{
+      "type":"products-grid"
+    },
+    "collections-grid":{
+      "type":"collections-grid"
+    },
+    "product-timer":{
+      "type":"product-timer"
+    },
+    "testimony-v1":{
+      "type":"testimony-v1"
+    },
+    "insta-gallery":{
+      "type":"insta-gallery"
     }
+
   },
   "order": [
+    "statement",
+    "navbar",
     "hero",
-    "fist-of-collections"
+    "features",
+    "products-grid",
+    "collections-grid",
+    "product-timer",
+    "testimony-v1",
+    "insta-gallery",
+    "footer-v1"
   ]
 }

@@ -6,33 +6,114 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
-    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-    {{content_for_header}}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <style>
+      @font-face {
+        font-family: 'icomoon';
+        src:  url('{{ "icomoon.eot" | asset_url }}');
+        src:  url(''{{ "icomoon.eot" | asset_url }}'') format('embedded-opentype'),
+          url('{{ "icomoon.ttf" | asset_url }}') format('truetype'),
+          url('{{ "icomoon.woff" | asset_url }}') format('woff'),
+          url('{{ "icomoon.svg" | asset_url }}') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+      	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 12/08/2018 13:24
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("{{ 'Flaticon.eot' | asset_url }}");
+  src: url("{{ 'Flaticon.eot' | asset_url }}") format("embedded-opentype"),
+       url("{{ 'Flaticon.woff' | asset_url }}") format("woff"),
+       url("{{ 'Flaticon.ttf' | asset_url }}") format("truetype"),
+       url("{{ 'Flaticon.svg' | asset_url }}") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("{{ 'Flaticon.svg#Flaticon' | asset_url }}") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-bag:before { content: "\f100"; }
+.flaticon-customer-service:before { content: "\f101"; }
+.flaticon-payment-security:before { content: "\f102"; }
+.flaticon-heart-box:before { content: "\f103"; }
+    
+    </style>
+    <link rel="stylesheet" href="{{'open-iconic-bootstrap.min.css' | asset_url }} ">
+    <link rel="stylesheet" href="{{ 'animate.css' | asset_url }}">
+    
+    <link rel="stylesheet" href="{{ 'owl.carousel.min.css' |asset_url }}">
+    <link rel="stylesheet" href="{{ 'owl.theme.default.min.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'magnific-popup.css' | asset_url }}">
+
+    <link rel="stylesheet" href="{{ 'aos.css' | asset_url }}">
+
+    <link rel="stylesheet" href="{{ 'ionicons.min.css' | asset_url }}">
+
+    <link rel="stylesheet" href="{{ 'bootstrap-datepicker.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'jquery.timepicker.css' | asset_url }}">
+
+    
+    <link rel="stylesheet" href="{{ 'flaticon.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'icomoon.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'style.css' | asset_url }}">
+
+    {{ content_for_header }}
 
     <!-- -----styles ------->
-    <link rel="stylesheet" href=" {{'global.css' | asset_url }} ">
+    <link rel="stylesheet" href=" {{ 'global.css' | asset_url }} ">
     <!-- -----styles -------->
 
   </head>
 
-  <body>
-
-    <a class="skip-to-content-link" href="#MainContent">
-      {{ "accessibility.skip_to_text" | t }}
-    </a>
-
-    {%section 'header' %}
-    <main id="MainContent" role="main" tabindex="-1">
+  <body class="goto-here">
+    <main>
       {{ content_for_layout }}
     </main>
 
-    {%section 'main-footer' %}
+{% section 'footer-v1' %}
 
-   
 
-    
+{% comment %} js {% endcomment %}
+<script src="{{'jquery.min.js' | asset_url }}"></script>
+<script src="{{'jquery-migrate-3.0.1.min.js' | asset_url }}"></script>
+<script src="{{'popper.min.js' | asset_url }}"></script>
+<script src="{{'bootstrap.min.js' | asset_url }}"></script>
+<script src="{{'jquery.easing.1.3.js' | asset_url }}"></script>
+<script src="{{ 'jquery.waypoints.min.js' | asset_url }}"></script>
+<script src="{{'jquery.stellar.min.js' | asset_url }}"></script>
+<script src="{{'owl.carousel.min.js' | asset_url }}"></script>
+<script src="{{'jquery.magnific-popup.min.js' | asset_url }}"></script>
+<script src="{{'aos.js' | asset_url }}"></script>
+<script src="{{'jquery.animateNumber.min.js' | asset_url }}"></script>
+<script src="{{'bootstrap-datepicker.js' | asset_url }}"></script>
+<script src="{{'scrollax.min.js' | asset_url }}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false" ></script>
+<script src="{{'google-map.js' |asset_url }}"></script>
+<script src="{{'main.js' | asset_url }}"></script> 
 
-    
 
   </body>
 </html>
