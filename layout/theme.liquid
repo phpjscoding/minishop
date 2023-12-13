@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">  
     <style>
       @font-face {
         font-family: 'icomoon';
@@ -96,7 +96,7 @@
 {% section 'footer-v1' %}
 
 
-{% comment %} js {% endcomment %}
+{% comment %} js 
 <script src="{{'jquery.min.js' | asset_url }}"></script>
 <script src="{{'jquery-migrate-3.0.1.min.js' | asset_url }}"></script>
 <script src="{{'popper.min.js' | asset_url }}"></script>
@@ -112,7 +112,10 @@
 <script src="{{'scrollax.min.js' | asset_url }}"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false" ></script>
 <script src="{{'google-map.js' |asset_url }}"></script>
-<script src="{{'main.js' | asset_url }}"></script> 
+{% endcomment %}
+<script src="{{ 'helpers.js' | asset_url }}" type="module"></script>
+<script src="{{ 'functions.js' | asset_url }}" type="module"></script>
+<script src="{{'main.js' | asset_url }}" type="module"></script> 
 
 
   </body>
