@@ -1,1 +1,43 @@
+
 {% render 'hero-v1' %}
+
+{% schema %}
+{
+    "name": "Hero Slides",
+    "settings": [
+     
+        ],
+        "blocks":[
+             {
+                "name":"Slide",
+                "type":"slide",
+                "limit":8,
+                "settings": [
+                    {
+                        "type":"image_picker",
+                        "id":"slide_img",
+                        "label": "Slide img"
+                    },
+                    {
+          "type": "text",
+          "id": "heading",
+          "default": "Collection Demo",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "sub_heading",
+          "default": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae officia officiis velit est at temporibus iure itaque dolorum eveniet fugiat?",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "default": "#New Arrival",
+          "label": "Tag"
+        }
+                ]
+             }
+        ]
+}
+{% endschema %}

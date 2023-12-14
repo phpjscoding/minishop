@@ -1,14 +1,12 @@
 <section id="home-section" class="hero">
   <div class="home-slider owl-carousel owl-loaded owl-drag">
-    <div class="owl-stage-outer">
-      <div
-        class="owl-stage"
-        style="transform: translate3d(-4353px, 0px, 0px); transition: all 0s ease 0s; width: 8706px;"
-      >
+    <swiper-container class="hero-swiper-1" style="height: 90%;"  scrollbar-hide="true" autoplay-delay="2500000" autoplay-disable-on-interaction="false">
+
         {% for i in (1..5) %}
-        <div class="owl-item {{ i }}" style="width: 1451px;">
+          <swiper-slide>
+        <div class="swiper-slide-{{ i }}">
           <div class="slider-item js-fullheight" style="height: 419px;">
-            <div class="overlay"></div>
+            <div class="overlay"></div> 
             <div class="container-fluid p-0">
               <div
                 class="row d-md-flex no-gutters slider-text align-items-center justify-content-end"
@@ -17,8 +15,6 @@
                 <img class="one-third order-md-last img-fluid" src="{{'bg_1.png' | asset_url }}" alt="">
                 <div
                   class="one-forth d-flex align-items-center ftco-animate fadeInUp ftco-animated"
-                  data-scrollax=" properties: { translateY: '70%' }"
-                  style="transform: translateZ(0px) translateY(38.939%);"
                 >
                   <div class="text">
                     <span class="subheading">#New Arrival</span>
@@ -37,16 +33,13 @@
             </div>
           </div>
         </div>
+        </swiper-slide>
     {% endfor %} 
-      
-      </div>
-    </div>
-    <div class="owl-nav disabled">
-      <button role="presentation" class="owl-prev"><span class="ion-md-arrow-back"></span></button
-      ><button role="presentation" class="owl-next"><span class="ion-chevron-right"></span></button>
-    </div>
-    <div class="owl-dots">
-      <button class="owl-dot"><span></span></button><button class="owl-dot active"><span></span></button>
-    </div>
+  
+    </swiper-container>
+
   </div>
+
 </section>
+
+

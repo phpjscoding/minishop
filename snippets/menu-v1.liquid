@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light scrolled awake" id="ftco-navbar" data-sticky="{{ section.settings.sticky_header_type }}">
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" data-sticky="{{ section.settings.sticky_header_type }}">
     <div class="container">
       <a class="navbar-brand" href="index.html"> 
          {% if section.settings.header_logo == blank %}
@@ -45,8 +45,11 @@
       </div>
     </div>
   </nav>
+  
 
 <script>
-  let stickyHeader = "{{ section.settings.sticky_header_type | json }}"
+  const stickyHeader = "{{ section.settings.sticky_header_type | json  }}"
+  window.themeData = {}
+  window.themeData.stickyHeader = 'stickyHeader'
   console.log(stickyHeader,'stickyHeader')
 </script>

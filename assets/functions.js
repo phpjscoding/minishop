@@ -1,19 +1,23 @@
 import {addClass , removeClass } from './helpers.js'
 
-export let events={
+export const events={
     scroll:window.addEventListener('scroll', handleScroll)
 
 }
-
-
-function handleScroll(){
-    //sleep scrolled awake
-    
+const makeHeaderSticky =()=>{
+        
     if(window.scrollY > 300){
-        addClass("#ftco-navbar","wwwwww")
+        addClass("#ftco-navbar","sleep")
+        addClass("#ftco-navbar","scrolled")
+        addClass("#ftco-navbar","awake")
     }else{
-        removeClass("#ftco-navbar","wwwwww")
+        removeClass("#ftco-navbar","sleep")
+        removeClass("#ftco-navbar","scrolled")
+        removeClass("#ftco-navbar","awake")
 
     }
-console.log(window.scrollY )
+}
+
+function handleScroll(){
+    makeHeaderSticky()
 }

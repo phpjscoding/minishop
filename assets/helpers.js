@@ -10,3 +10,6 @@ export const removeClass=(elem,className)=>{
 
 }
   
+export const addClasses=(elem,array)=>{
+    array.map(cls=> addClass(elem,cls) )
+}

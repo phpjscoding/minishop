@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">    
     <style>
       @font-face {
         font-family: 'icomoon';
@@ -78,7 +78,13 @@
     
     <link rel="stylesheet" href="{{ 'flaticon.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'icomoon.css' | asset_url }}">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <link rel="stylesheet" href="{{ 'style.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'global.css' | asset_url }}">
+    
 
     {{ content_for_header }}
 
@@ -113,8 +119,19 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false" ></script>
 <script src="{{'google-map.js' |asset_url }}"></script>
 {% endcomment %}
+
+
+<script>
+  // themeData will contain Liquid settings globaly available in js 
+if (!window.themeData) {
+  window.themeData = {}; // Create window.themeData if it doesn't exist
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
 <script src="{{ 'helpers.js' | asset_url }}" type="module"></script>
 <script src="{{ 'functions.js' | asset_url }}" type="module"></script>
+
 <script src="{{'main.js' | asset_url }}" type="module"></script> 
 
 
